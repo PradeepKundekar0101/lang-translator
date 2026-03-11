@@ -179,7 +179,7 @@ export default function Home() {
       />
 
       {/* Header */}
-      <header className="z-10 border-b border-[var(--border)] bg-[var(--bg)]/60 backdrop-blur-xl sticky top-0">
+      <header className="relative z-10 border-b border-[var(--border)] bg-[var(--bg)]/60 backdrop-blur-xl sticky top-0">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
@@ -189,20 +189,15 @@ export default function Home() {
               Lingua
             </span>
           </div>
-          <a
-            href="https://openrouter.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors duration-200 flex items-center gap-1.5"
-          >
-            <Sparkles size={11} />
-            Powered by OpenRouter
-          </a>
+
         </div>
       </header>
 
       {/* Main */}
       <main className="relative z-10 flex-1 max-w-6xl mx-auto w-full px-6 pt-16 pb-20">
+        <div className="absolute top-0 -left-[40%] w-[300px] h-[300px] bg-indigo-500/20 rounded-full blur-3xl opacity-50">
+
+        </div>
         {/* Hero */}
         <div className="text-center mb-16">
           <div
@@ -243,8 +238,8 @@ export default function Home() {
                   setError(null);
                 }}
                 className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-[10px] text-sm font-medium transition-all duration-200 ${mode === "text"
-                    ? "bg-[var(--surface-2)] text-[var(--text-primary)] shadow-sm"
-                    : "text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
+                  ? "bg-[var(--surface-2)] text-[var(--text-primary)] shadow-sm"
+                  : "text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
                   }`}
               >
                 <Type size={14} />
@@ -256,8 +251,8 @@ export default function Home() {
                   setError(null);
                 }}
                 className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-[10px] text-sm font-medium transition-all duration-200 ${mode === "file"
-                    ? "bg-[var(--surface-2)] text-[var(--text-primary)] shadow-sm"
-                    : "text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
+                  ? "bg-[var(--surface-2)] text-[var(--text-primary)] shadow-sm"
+                  : "text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
                   }`}
               >
                 <FileText size={14} />
